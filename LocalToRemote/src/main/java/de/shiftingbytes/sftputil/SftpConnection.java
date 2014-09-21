@@ -40,7 +40,7 @@ public class SftpConnection {
 			InputStream initialStream = sftp.getOperation();
 			
 		
-			File targetFile = new File("C:/temp/targetFile.tmp");
+			File targetFile = new File(this.localFilename);
 		
 			
 			FileUtils.copyInputStreamToFile(initialStream, targetFile);
