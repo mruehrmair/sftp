@@ -1,10 +1,3 @@
-/** 
- * SFTP service class using jsch library
- * 
- * @author      Markus Rührmair 
- * @date 		21.09.2014
- */
-
 package de.shiftingbytes.sftputil;
 
 import java.io.InputStream;
@@ -43,7 +36,9 @@ public class SftpService {
 	
 	
 	public void connect() throws JSchException{
-
+		
+		
+		
 		JSch jsch=new JSch();
 		int port = this.connectionConf.getPort()>0 ? this.connectionConf.getPort() : DEFAULTPORT; 
 		Session session=jsch.getSession(this.connectionConf.getUser(),this.connectionConf.getHost() , port);
@@ -55,7 +50,10 @@ public class SftpService {
 		
 		this.session = session;
 		this.session.connect();
-
+		
+		
+		
+		
         Channel channel=session.openChannel("sftp");
         channel.connect();
         ChannelSftp c=(ChannelSftp)channel;

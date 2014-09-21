@@ -1,10 +1,3 @@
-/** 
- * SFTP connection data and available operations
- * Facade for jsch library
- * 
- * @author      Markus Rührmair 
- * @date 		21.09.2014
- */
 package de.shiftingbytes.sftputil;
 
 import java.io.File;
@@ -14,7 +7,10 @@ import org.apache.commons.io.FileUtils;
 
 public class SftpConnection {
 
-
+	/**
+	 * @param args
+	 */
+	
 	
 	private String host;
 	private String user;
